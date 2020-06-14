@@ -219,23 +219,22 @@ def generateDatasets(model, dataset, n_labels, sample_per_label):
         noise = np.random.normal(0, 1, (sample_per_label, 100))
         labels = np.array([n for _ in range(sample_per_label)])
         gen_imgs = model.predict([noise, labels])
-        np.save(f"gan_datasets/{dataset}/{n}_images.npy", gen_imgs)
+        np.save(f"datasets/{dataset}/{n}_images.npy", gen_imgs)
 
         for i in range(len(gen_imgs)):
             if dataset == "cifar10":
                 img = gen_imgs[i, :, :]
-                # Da fixare, le immagini vengono storpiate con strani colori vividi
                 img = Image.fromarray(np.uint8(img * 255), 'RGB')
             else:
                 img = gen_imgs[i, :, :, 0]
                 img = Image.fromarray(np.uint8(img * 255), 'L')
-            img.save(f"gan_datasets/{dataset}/{n}/{i}.png")
+            img.save(f"datasets/{dataset}/{n}/{i}.png")
 
 
 def showDatasets(mnist=False, fashion_mnist=False, cifar10=False):
     print("mnist")
     for n in range(10):
-        imgs = np.load(f"gan_datasets/mnist/{n}_images.npy")
+        imgs = np.load(f"datasets/mnist/{n}_images.npy")
         print(imgs.shape)
         if mnist:
             for img in imgs:
@@ -244,7 +243,7 @@ def showDatasets(mnist=False, fashion_mnist=False, cifar10=False):
 
     print("fashion_mnist")
     for n in range(10):
-        imgs = np.load(f"gan_datasets/fashion_mnist/{n}_images.npy")
+        imgs = np.load(f"datasets/fashion_mnist/{n}_images.npy")
         print(imgs.shape)
         if fashion_mnist:
             for img in imgs:
@@ -253,7 +252,7 @@ def showDatasets(mnist=False, fashion_mnist=False, cifar10=False):
 
     print("cifar10")
     for n in range(10):
-        imgs = np.load(f"gan_datasets/cifar10/{n}_images.npy")
+        imgs = np.load(f"datasets/cifar10/{n}_images.npy")
         print(imgs.shape)
         if cifar10:
             for img in imgs:

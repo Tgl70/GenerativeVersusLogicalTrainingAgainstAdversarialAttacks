@@ -1,6 +1,7 @@
 from PIL import Image
 import numpy as np
 import torch
+import cv2
 
 
 class MyDataset(torch.utils.data.dataset.Dataset):
@@ -17,44 +18,45 @@ class MyDataset(torch.utils.data.dataset.Dataset):
         if dataset == 'mnist' or dataset == 'fashion_mnist' or dataset == 'cifar10':
             n_classes = 10
         
-        # if dtype == 'datasetA':
-        data = np.load(f"datasets/{dataset}/datasetA/X_train.npy")
-        [self.X_train.append(d) for d in data]
+        if dtype == 'datasetA' or dtype == 'datasetB' or dtype == 'datasetC':
+            data = np.load(f"datasets/{dataset}/datasetA/X_train.npy")
+            [self.X_train.append(d) for d in data]
 
-        data = np.load(f"datasets/{dataset}/datasetA/X_test.npy")
-        [self.X_test.append(d) for d in data]
+            data = np.load(f"datasets/{dataset}/datasetA/y_train.npy")
+            [self.y_train.append(torch.tensor(int(d))) for d in data]
 
-        data = np.load(f"datasets/{dataset}/datasetA/y_train.npy")
-        [self.y_train.append(torch.tensor(int(d))) for d in data]
+            data = np.load(f"datasets/{dataset}/datasetA/X_test.npy")
+            [self.X_test.append(d) for d in data]
 
-        data = np.load(f"datasets/{dataset}/datasetA/y_test.npy")
-        [self.y_test.append(torch.tensor(int(d))) for d in data]
-        
+            data = np.load(f"datasets/{dataset}/datasetA/y_test.npy")
+            [self.y_test.append(torch.tensor(int(d))) for d in data]
+
         if dtype == 'datasetB':
             for i in range(n_classes):
                 data = np.load(f"datasets/{dataset}/datasetB/{i}_images.npy")
                 # Bringing the pixels in [0, 1] from [-1, 1]
-                data = (data + 1) / 2
+                data = (data + 1) / 2.0
+                data = data.astype(np.float64)
                 for j in range(len(data)):
-                    if j < len(data) * 0.8:
-                        self.X_train.append(data[j])
-                        self.y_train.append(torch.tensor(i))
-                    else:
-                        self.X_test.append(data[j])
-                        self.y_test.append(torch.tensor(i))
+                    self.X_train.append(data[j])
+                    self.y_train.append(torch.tensor(i))
 
         if dtype == 'datasetC':
             data = np.load(f"datasets/{dataset}/datasetC/X_train.npy")
-            [self.X_train.append(d) for d in data]
-
-            data = np.load(f"datasets/{dataset}/datasetC/X_test.npy")
-            [self.X_test.append(d) for d in data]
+            [self.X_train.append(d) for d in data]   
 
             data = np.load(f"datasets/{dataset}/datasetC/y_train.npy")
             [self.y_train.append(torch.tensor(int(d))) for d in data]
 
-            data = np.load(f"datasets/{dataset}/datasetC/y_test.npy")
-            [self.y_test.append(torch.tensor(int(d))) for d in data]
+        if dtype == 'testAdversarial':
+            for i in range(n_classes):
+                data = np.load(f"datasets/{dataset}/testAdversarial/{i}_images.npy")
+                # Bringing the pixels in [0, 1] from [-1, 1]
+                data = (data + 1) / 2.0
+                data = data.astype(np.float64)
+                for j in range(len(data)):
+                    self.X_test.append(data[j])
+                    self.y_test.append(torch.tensor(i))
 
     def __getitem__(self, index):
         if self.train:

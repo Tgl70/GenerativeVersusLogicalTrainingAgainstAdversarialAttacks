@@ -129,7 +129,6 @@ dmypy.json
 .pyre/
 
 .idea/
-imagesGAN/
 imagesACGAN/
 saved_model/
 data/
@@ -147,4 +146,4 @@ data/
 9/
 models/
 datasets/
-gan_datasets/
+FGSM_images/

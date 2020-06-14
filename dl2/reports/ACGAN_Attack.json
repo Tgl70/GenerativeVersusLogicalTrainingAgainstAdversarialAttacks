@@ -1,0 +1,42 @@
+[
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "dl2",
+        "accuracy": 0.9742
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetA",
+        "accuracy": 0.9825
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetB",
+        "accuracy": 0.9992
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetC",
+        "accuracy": 0.9805
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "dl2",
+        "accuracy": 0.9987
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetA",
+        "accuracy": 0.9984
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetB",
+        "accuracy": 0.9997
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetC",
+        "accuracy": 0.9986
+    }
+]

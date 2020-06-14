@@ -30,6 +30,7 @@ def train(args, oracle, net, device, train_loader, optimizer, epoch):
 
     print('\nEpoch ', epoch)
     for batch_idx, (data, target) in enumerate(train_loader):
+        data = data.float()
         x_batch, y_batch = data.to(device), target.to(device)
         n_batch = int(x_batch.size()[0])
         num_steps += 1
@@ -99,6 +100,7 @@ def test(args, oracle, model, device, test_loader):
     
     for data, target in test_loader:
         num_steps += 1
+        data = data.float()
         x_batch, y_batch = data.to(device), target.to(device)
         n_batch = int(x_batch.size()[0])
 
@@ -166,8 +168,7 @@ if __name__ == "__main__":
             transforms.RandomCrop(32, padding=4),
             transforms.RandomHorizontalFlip(),
             transforms.ToTensor(),
-        ])  # meanstd transformation
-
+        ])
         transform_test = transforms.Compose([
             transforms.ToTensor(),
         ])
