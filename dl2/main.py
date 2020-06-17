@@ -163,7 +163,7 @@ if __name__ == "__main__":
         transform_test = transforms.Compose([transforms.ToTensor()])
         model = MnistNet().to(device)
 
-    elif args.dataset == 'cifar10':
+    elif args.dataset == 'cifar10' or args.dataset == 'gtsrb':
         transform_train = transforms.Compose([
             transforms.RandomCrop(32, padding=4),
             transforms.RandomHorizontalFlip(),

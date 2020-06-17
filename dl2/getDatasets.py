@@ -15,7 +15,7 @@ class MyDataset(torch.utils.data.dataset.Dataset):
         self.X_test = []
         self.y_test = []
 
-        if dataset == 'mnist' or dataset == 'fashion_mnist' or dataset == 'cifar10':
+        if dataset == 'mnist' or dataset == 'fashion_mnist' or dataset == 'cifar10'  or dataset == 'gtsrb':
             n_classes = 10
         
         if dtype == 'datasetA' or dtype == 'datasetB' or dtype == 'datasetC':

@@ -117,11 +117,18 @@ class ACGAN:
 
     def train(self, epochs, dataset, batch_size=128, sample_interval=50):
 
-        # Load the dataset
-        (x_train, y_train), (_, _) = eval(dataset).load_data()
+        if dataset == "gtsrb":
+            x_train = np.load(f"../datasetsA/datasets/{dataset}/X_train.npy")
+            y_train = np.load(f"../datasetsA/datasets/{dataset}/y_train.npy")
+            x_train = x_train.reshape(x_train.shape[0], x_train.shape[1], x_train.shape[2])
+            # [0, 1] --> [-1, 1]
+            x_train = (x_train.astype(np.float32) - 0.5) * 2
 
-        # Configure inputs
-        x_train = (x_train.astype(np.float32) - 127.5) / 127.5
+        else:
+            (x_train, y_train), (_, _) = eval(dataset).load_data()
+            # [0, 255] --> [-1, 1]
+            x_train = (x_train.astype(np.float32) - 127.5) / 127.5
+        
         x_train = np.expand_dims(x_train, axis=3)
         y_train = y_train.reshape(-1, 1)
 
@@ -204,6 +211,7 @@ class ACGAN:
 
 
 def trainACGANs():
+    '''
     mnist_acgan = ACGAN(rows=28, cols=28, channels=1)
     mnist_acgan.train(epochs=30001, batch_size=32, sample_interval=200, dataset="mnist")
 
@@ -212,6 +220,9 @@ def trainACGANs():
 
     cifar10_acgan = ACGAN(rows=32, cols=32, channels=3)
     cifar10_acgan.train(epochs=30001, batch_size=32, sample_interval=200, dataset="cifar10")
+    '''
+    gtsrb_acgan = ACGAN(rows=48, cols=48, channels=1)
+    gtsrb_acgan.train(epochs=30001, batch_size=32, sample_interval=200, dataset="gtsrb")
 
 
 def generateDatasets(model, dataset, n_labels, sample_per_label):
@@ -231,7 +242,7 @@ def generateDatasets(model, dataset, n_labels, sample_per_label):
             img.save(f"datasets/{dataset}/{n}/{i}.png")
 
 
-def showDatasets(mnist=False, fashion_mnist=False, cifar10=False):
+def showDatasets(mnist=False, fashion_mnist=False, cifar10=False, gtsrb=False):
     print("mnist")
     for n in range(10):
         imgs = np.load(f"datasets/mnist/{n}_images.npy")
@@ -259,18 +270,30 @@ def showDatasets(mnist=False, fashion_mnist=False, cifar10=False):
                 plt.imshow(img[:, :], cmap='gray')
                 plt.show()
 
+    print("gtsrb")
+    for n in range(10):
+        imgs = np.load(f"datasets/gtsrb/{n}_images.npy")
+        print(imgs.shape)
+        if gtsrb:
+            for img in imgs:
+                plt.imshow(img[:, :], cmap='gray')
+                plt.show()
+
 
 if __name__ == '__main__':
     
-    # trainACGANs()
-
+    trainACGANs()
+    
     n_labels = 10
     sample_per_label = 10000
     model_mnist = load_model("models/mnist/generator_mnist_29600.model")
     model_fashion_mnist = load_model("models/fashion_mnist/generator_fashion_mnist_27800.model")
     model_cifar10 = load_model("models/cifar10/generator_cifar10_30000.model")
+    model_gtsrb = load_model("models/gtsrb/generator_gtsrb_29800.model")
     generateDatasets(model=model_mnist, dataset="mnist", n_labels=n_labels, sample_per_label=sample_per_label)
     generateDatasets(model=model_fashion_mnist, dataset="fashion_mnist", n_labels=n_labels, sample_per_label=sample_per_label)
     generateDatasets(model=model_cifar10, dataset="cifar10", n_labels=n_labels, sample_per_label=sample_per_label)
+    generateDatasets(model=model_gtsrb, dataset="gtsrb", n_labels=n_labels, sample_per_label=sample_per_label)
 
-    showDatasets(mnist=False, fashion_mnist=False, cifar10=False)
+    showDatasets(mnist=False, fashion_mnist=False, cifar10=False, gtsrb=False)
+    

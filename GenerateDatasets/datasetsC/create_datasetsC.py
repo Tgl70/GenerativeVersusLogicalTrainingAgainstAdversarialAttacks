@@ -9,7 +9,7 @@ def mod_data(dataset, distance, X, Y, n):
     for i in range(len(X)):
         x_mod = []
         y_mod = []
-        if dataset == 'mnist' or dataset == 'fashion_mnist':
+        if dataset == 'mnist' or dataset == 'fashion_mnist' or dataset == 'gtsrb':
             # Create 5 new images per image 'x'
             while len(x_mod) < (n/2):
                 x = X[i].copy()
@@ -18,8 +18,8 @@ def mod_data(dataset, distance, X, Y, n):
                     # Random positive modification number
                     d = random.uniform(0, 0.1)
                     # Random pixel
-                    px = random.randint(0, 28 - 1)
-                    py = random.randint(0, 28 - 1)
+                    px = random.randint(0, x.shape[0] - 1)
+                    py = random.randint(0, x.shape[1] - 1)
                     # Modify the pixel if it stays between [-1, 1]
                     if x[px][py] + d >= 0 and x[px][py] + d <= 1:
                         x[px][py] += d
@@ -34,7 +34,7 @@ def mod_data(dataset, distance, X, Y, n):
                         y_mod.append(Y[i])
                         break
 
-            # Create another 5 new images per image 'x'
+            # Create another n new images per image 'x'
             while len(x_mod) < n:
                 x = X[i].copy()
                 # Randomly modify numbers until a certain euclidean distance from the original image is reached
@@ -85,7 +85,7 @@ def mod_data(dataset, distance, X, Y, n):
                         y_mod.append(Y[i])
                         break
 
-            # Create another 5 new images per image 'x'
+            # Create another n new images per image 'x'
             while len(x_mod) < n:
                 x = X[i].copy()
                 # Randomly modify numbers until a certain euclidean distance from the original image is reached
@@ -149,3 +149,4 @@ if __name__ == "__main__":
     create_data('mnist', 0.2, n=2)
     create_data('fashion_mnist', 0.3, n=2)
     create_data('cifar10', 0.4, n=2)
+    create_data('gtsrb', 0.4, n=2)

@@ -11,14 +11,13 @@ def generateDatasets(model, dataset, n_labels, sample_per_label):
 
 
 if __name__ == '__main__':
-    
-    # trainACGANs()
-
     n_labels = 10
     sample_per_label = 1000
     model_mnist = load_model("../datasetsB/models/mnist/generator_mnist_29800.model")
     model_fashion_mnist = load_model("../datasetsB/models/fashion_mnist/generator_fashion_mnist_28000.model")
     model_cifar10 = load_model("../datasetsB/models/cifar10/generator_cifar10_29800.model")
+    model_gtsrb = load_model("../datasetsB/models/gtsrb/generator_gtsrb_29600.model")
     generateDatasets(model=model_mnist, dataset="mnist", n_labels=n_labels, sample_per_label=sample_per_label)
     generateDatasets(model=model_fashion_mnist, dataset="fashion_mnist", n_labels=n_labels, sample_per_label=sample_per_label)
     generateDatasets(model=model_cifar10, dataset="cifar10", n_labels=n_labels, sample_per_label=sample_per_label)
+    generateDatasets(model=model_gtsrb, dataset="gtsrb", n_labels=n_labels, sample_per_label=sample_per_label)

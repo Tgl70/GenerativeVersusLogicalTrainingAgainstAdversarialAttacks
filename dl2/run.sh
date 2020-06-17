@@ -4,21 +4,25 @@
 python main.py --dl2-weight 0.2 --dataset mnist --dtype "datasetA"
 python main.py --dl2-weight 0.2 --dataset fashion_mnist --dtype "datasetA"
 python main.py --dl2-weight 0.1 --dataset cifar10 --dtype "datasetA"
+python main.py --dl2-weight 0.1 --dataset gtsrb --dtype "datasetA"
 
 # DatasetsA
 python main.py --dl2-weight 0 --dataset mnist --dtype "datasetA"
 python main.py --dl2-weight 0 --dataset fashion_mnist --dtype "datasetA"
 python main.py --dl2-weight 0 --dataset cifar10 --dtype "datasetA"
+python main.py --dl2-weight 0 --dataset gtsrb --dtype "datasetA"
 
 # DatasetsB
 python main.py --dl2-weight 0 --dataset mnist --dtype "datasetB"
 python main.py --dl2-weight 0 --dataset fashion_mnist --dtype "datasetB"
 python main.py --dl2-weight 0 --dataset cifar10 --dtype "datasetB"
+python main.py --dl2-weight 0 --dataset gtsrb --dtype "datasetB"
 
 # DatasetsC
 python main.py --dl2-weight 0 --dataset mnist --dtype "datasetC"
 python main.py --dl2-weight 0 --dataset fashion_mnist --dtype "datasetC"
 python main.py --dl2-weight 0 --dataset cifar10 --dtype "datasetC"
+python main.py --dl2-weight 0 --dataset gtsrb --dtype "datasetC"
 
 
 
