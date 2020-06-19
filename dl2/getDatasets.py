@@ -2,6 +2,7 @@ from PIL import Image
 import numpy as np
 import torch
 import cv2
+import time
 
 
 class MyDataset(torch.utils.data.dataset.Dataset):
@@ -69,8 +70,12 @@ class MyDataset(torch.utils.data.dataset.Dataset):
         if self.dataset == 'cifar10':
             img = Image.fromarray(img, 'RGB')
 
+        if self.dataset == 'gtsrb':
+            img = Image.fromarray(img[:, :, 0], 'L')
+
         if self.transform is not None:
             img = self.transform(img)
+
         return img, label
 
     def __len__(self):

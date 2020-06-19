@@ -5,9 +5,9 @@ import torch
 
 
 class MnistNet(nn.Module):
-    def __init__(self):
+    def __init__(self, dim):
         super(MnistNet, self).__init__()
-        self.conv1 = nn.Conv2d(1, 32, kernel_size=(5, 5))
+        self.conv1 = nn.Conv2d(dim, 32, kernel_size=(5, 5))
         self.bn1 = nn.BatchNorm2d(32)
         self.conv2 = nn.Conv2d(32, 32, kernel_size=(5, 5))
         self.bn2 = nn.BatchNorm2d(32)
@@ -111,12 +111,12 @@ std = {
 
 
 class ResNet(nn.Module):
-    def __init__(self, block, num_blocks, num_classes=10):
+    def __init__(self, dim, block, num_blocks, num_classes=10):
         super(ResNet, self).__init__()
         self.norm_trans = transforms.Compose([transforms.Normalize(mean['cifar10'], std['cifar10'])])
         self.in_planes = 64
 
-        self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
+        self.conv1 = nn.Conv2d(dim, 64, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(64)
         self.layer1 = self._make_layer(block, 64, num_blocks[0], stride=1)
         self.layer2 = self._make_layer(block, 128, num_blocks[1], stride=2)
@@ -134,7 +134,7 @@ class ResNet(nn.Module):
 
     def forward(self, x):
         tmp = x.clone()
-        for i in range(3):
+        for i in range(tmp.shape[1]):
             tmp[:,i,:,:] = (tmp[:,i,:,:] - mean['cifar10'][i]) / std['cifar10'][i]
         
         out = F.relu(self.bn1(self.conv1(tmp)))
@@ -148,8 +148,8 @@ class ResNet(nn.Module):
         return out
 
 
-def ResNet18():
-    return ResNet(BasicBlock, [2,2,2,2])
+def ResNet18(dim):
+    return ResNet(dim, BasicBlock, [2,2,2,2])
 
 
 def ResNet34():

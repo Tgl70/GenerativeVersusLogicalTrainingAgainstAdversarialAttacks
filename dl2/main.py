@@ -13,10 +13,6 @@ import time
 import os
 
 
-def RobustnessT(eps1, eps2):
-    return lambda model, use_cuda, network_output: RobustnessDatasetConstraint(model, eps1, eps2, use_cuda=use_cuda, network_output=network_output)
-
-
 def RobustnessG(eps, delta):
     return lambda model, use_cuda, network_output: RobustnessConstraint(model, eps, delta, use_cuda, network_output=network_output)
 
@@ -161,9 +157,9 @@ if __name__ == "__main__":
     if args.dataset == 'mnist' or args.dataset == 'fashion_mnist':
         transform_train = transforms.Compose([transforms.ToTensor()])
         transform_test = transforms.Compose([transforms.ToTensor()])
-        model = MnistNet().to(device)
+        model = MnistNet(dim=1).to(device)
 
-    elif args.dataset == 'cifar10' or args.dataset == 'gtsrb':
+    elif args.dataset == 'cifar10':
         transform_train = transforms.Compose([
             transforms.RandomCrop(32, padding=4),
             transforms.RandomHorizontalFlip(),
@@ -172,7 +168,18 @@ if __name__ == "__main__":
         transform_test = transforms.Compose([
             transforms.ToTensor(),
         ])
-        model = ResNet18().to(device)
+        model = ResNet18(dim=3).to(device)
+
+    elif args.dataset == 'gtsrb':
+        transform_train = transforms.Compose([
+            transforms.RandomCrop(32, padding=4),
+            transforms.RandomHorizontalFlip(),
+            transforms.ToTensor(),
+        ])
+        transform_test = transforms.Compose([
+            transforms.ToTensor(),
+        ])
+        model = ResNet18(dim=1).to(device)
 
     optimizer = optim.Adam(model.parameters(), lr=0.0001)
 
@@ -223,93 +230,3 @@ if __name__ == "__main__":
 
     with open(report_file, 'w') as fou:
         json.dump(data_dict, fou, indent=4)
-
-# global robustness also checks the same label not the correct label,
-# modificare il programma per checkare la correct label
-# maybe usare la loss solo se è correttamente classified
-
-# man mano che gli esperimenti sono pronti metterli in una tabella subito
-
-# salvare non solo l'ultimo modello ma gli ultimi tot, maybe 20-25 - OK
-# modificare i nomi dei report (rimane solo 'dtype') - OK
-# magari fare un method a parte per loadare i datasets e i modelli - OK
-# pulire il codice e togliere i pezzi inutili
-
-
-# args.py OK
-# constraints.py da controllare la riga commentata
-# diffsat.py OK
-# domains.py OK
-# getDataset da finire con datasetsC
-# models.py OK
-# oracles.py ancora da vedere
-# results.py da vedere e aggiustare al mio caso
-
-
-
-
-
-'''
-Our global robustness constraint requires that for any input
-x with a classification y, inputs in its [0,1] neighborhood which
-are valid images (pixels are between 0 and 1), have a high
-probability for y. For numerical stability, instead of directly
-checking the probability, we check that the corresponding
-log-probability is larger than a given threshold δ.
-
-
-Here instead of the CLASSIFICATION y, we should use the LABEL y.      !!!!!
-
-
-
-
-Sarebbe da sostituire (riga 31, constraints.py):
-        z_outputs = [self.net(z_input) for z_input in z_inputs]
-con le vere label per ogni z_input.
-
-
-
-
-Bisogna vedere in (riga 68, constraints.py):
-        def get_domains(self, x_batches, y_batches):
-questo method crea un oggetto BOX e forse si può salvare anche y_batches come terzo parametro nell'oggetto BOX,
-viene già passato ma non usato.
-
-Bisogna capire cosa vuol dire (riga 69, constraints.py):
-        assert len(x_batches) == 1
-forse vuol dire che c'è solo un batch.
-
-Bisogna capire la correlazione tra x_batches e il BOX e vedere se è possibile fare un pair con y_batches in BOX.
-Se fosse possibile, allora quando z_batches viene creato in (riga 42, oracles.py):
-        z_batches = [np.concatenate([np.expand_dims(domains[j][i].sample(), axis=0) for i in range(n_batch)], axis=0) for j in range(n_gvars)]
-si può prendere y_batches corrispondente da BOX e matcharlo con z_batches.
-
-Successisivamente bisgona modificare (riga 47, oracles.py):
-        neg_losses, pos_losses, sat, z_inputs = self.constraint.loss(x_batches, y_batches, z_batches, args)
-dando anche gli y_batches accoppiati con gli z_batches.
-
-
-
-
-(può creare confusione con gli y_batches che già stiamo passando,
-c'è da verificare che non vadano già bene,
-in questo caso si può skippare quello fatto fino ad ora e modificare solo quello che segue)
-DA CHECKARE (vedere le immagini nella riga di codice sopra citata e vedere se x_batches, y_batches e z_batches già corrispondono)
-
-
-
-
-Infine (riga 41, constraints.py):
-        z_inp, z_out = self.eval_z(z_batches)
-deve passare anche gli y_batches che corrispondono agli z_batches
-e (riga 31, constraints.py):
-        z_outputs = [self.net(z_input) for z_input in z_inputs]
-deve essere modificata come: --->   z_outputs = y_batches   <--- (controllando che siano dei floatTensor, se no farli con un loop come appena sopra in riga 25)
-
-
-
-(riga 81, constraints.py):
-        pred = z_out[np.arange(n_batch), y_batches[0]]
-FORSE FA GIà QUELLO CHE VOGLIAMO, CIOè pred è L'OUTPUT CORRISPONDENTE ALLA CLASSE GIUSTA.      DA VERIFICARE MA CREDO SIA GIUSTO!!!
-'''
-
