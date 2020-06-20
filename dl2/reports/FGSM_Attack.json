@@ -5,27 +5,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.9218
+                "accuracy": 0.9218,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8721,
+                "distance": 0.05612267549958
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8182,
+                "distance": 0.11208994194969184
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7674,
+                "distance": 0.16792734149490193
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.7207
+                "accuracy": 0.7207,
+                "distance": 0.2236093462703062
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.5888
+                "epsilon": 0.0125,
+                "accuracy": 0.6772,
+                "distance": 0.2792631274946961
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.5123
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.4614
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.4178
+                "epsilon": 0.015,
+                "accuracy": 0.6435,
+                "distance": 0.3348425763417575
             }
         ]
     },
@@ -35,27 +46,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.9251
+                "accuracy": 0.9251,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8729,
+                "distance": 0.056222948678254246
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8173,
+                "distance": 0.11229153792071418
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7662,
+                "distance": 0.16823119064355763
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.7198
+                "accuracy": 0.7198,
+                "distance": 0.2240187152462196
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.5917
+                "epsilon": 0.0125,
+                "accuracy": 0.6864,
+                "distance": 0.27977795446858744
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.5111
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.4403
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.3835
+                "epsilon": 0.015,
+                "accuracy": 0.6504,
+                "distance": 0.33546272447444964
             }
         ]
     },
@@ -65,27 +87,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.9273
+                "accuracy": 0.9273,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8704,
+                "distance": 0.056371585348728534
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8115,
+                "distance": 0.11259318422410733
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7562,
+                "distance": 0.16868951850004738
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.7032
+                "accuracy": 0.7032,
+                "distance": 0.22463557079103585
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.567
+                "epsilon": 0.0125,
+                "accuracy": 0.6612,
+                "distance": 0.2805540707282817
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.4891
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.431
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.3849
+                "epsilon": 0.015,
+                "accuracy": 0.6265,
+                "distance": 0.3364001899606979
             }
         ]
     },
@@ -95,27 +128,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.9276
+                "accuracy": 0.9276,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8793,
+                "distance": 0.05628621349703309
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8289,
+                "distance": 0.11241927178633057
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7822,
+                "distance": 0.16842440194951122
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.7423
+                "accuracy": 0.7423,
+                "distance": 0.2242781676415763
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.6223
+                "epsilon": 0.0125,
+                "accuracy": 0.7082,
+                "distance": 0.28010432652244277
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.5358
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.4739
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.4264
+                "epsilon": 0.015,
+                "accuracy": 0.6746,
+                "distance": 0.33585756134469036
             }
         ]
     },
@@ -125,27 +169,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.995
+                "accuracy": 0.995,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9934,
+                "distance": 0.056824306862827904
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9897,
+                "distance": 0.11338478349457998
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9854,
+                "distance": 0.1697232904722992
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.9752
+                "accuracy": 0.9752,
+                "distance": 0.2251280786789898
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.8812
+                "epsilon": 0.0125,
+                "accuracy": 0.956,
+                "distance": 0.28041348865399884
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.8242
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.7768
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.7308
+                "epsilon": 0.015,
+                "accuracy": 0.9239,
+                "distance": 0.3354629082217365
             }
         ]
     },
@@ -155,27 +210,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.9954
+                "accuracy": 0.9954,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9948,
+                "distance": 0.05450394609379251
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9931,
+                "distance": 0.10869963327729557
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9914,
+                "distance": 0.16263543370934505
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.9894
+                "accuracy": 0.9894,
+                "distance": 0.21549086518516006
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.9817
+                "epsilon": 0.0125,
+                "accuracy": 0.987,
+                "distance": 0.26820678827504796
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.9727
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.9617
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.946
+                "epsilon": 0.015,
+                "accuracy": 0.9856,
+                "distance": 0.3206478741953842
             }
         ]
     },
@@ -185,27 +251,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.996
+                "accuracy": 0.996,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9943,
+                "distance": 0.05538722228483871
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9924,
+                "distance": 0.11048041537093166
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9898,
+                "distance": 0.16532584239141593
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.987
+                "accuracy": 0.987,
+                "distance": 0.21913348667886717
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.9652
+                "epsilon": 0.0125,
+                "accuracy": 0.9829,
+                "distance": 0.272808203439662
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.938
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.9123
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.8827
+                "epsilon": 0.015,
+                "accuracy": 0.9777,
+                "distance": 0.32622109274483
             }
         ]
     },
@@ -215,27 +292,38 @@
         "attacks": [
             {
                 "epsilon": 0,
-                "accuracy": 0.995
+                "accuracy": 0.995,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9932,
+                "distance": 0.05383554136763857
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9911,
+                "distance": 0.10736930210116576
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9902,
+                "distance": 0.16064870166668438
             },
             {
                 "epsilon": 0.01,
-                "accuracy": 0.989
+                "accuracy": 0.989,
+                "distance": 0.21285550215582943
             },
             {
-                "epsilon": 0.02,
-                "accuracy": 0.9813
+                "epsilon": 0.0125,
+                "accuracy": 0.9871,
+                "distance": 0.2649235504918255
             },
             {
-                "epsilon": 0.03,
-                "accuracy": 0.9744
-            },
-            {
-                "epsilon": 0.04,
-                "accuracy": 0.965
-            },
-            {
-                "epsilon": 0.05,
-                "accuracy": 0.9527
+                "epsilon": 0.015,
+                "accuracy": 0.9853,
+                "distance": 0.3167188633883219
             }
         ]
     }

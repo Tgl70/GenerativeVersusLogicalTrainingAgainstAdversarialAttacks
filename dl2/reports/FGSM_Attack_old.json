@@ -1,0 +1,290 @@
+[
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "dl2",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9218,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7207,
+                "distance": 0.2236093462703067
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.5888,
+                "distance": 0.4458762271316592
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.5123,
+                "distance": 0.6675223745056645
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.4614,
+                "distance": 0.8887065595655793
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.4178,
+                "distance": 1.109360460804513
+            }
+        ]
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetA",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9251,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7198,
+                "distance": 0.2240187152462193
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.5917,
+                "distance": 0.44670907283237365
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.5111,
+                "distance": 0.6687756427221326
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.4403,
+                "distance": 0.8903701480309235
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.3835,
+                "distance": 1.111416809072039
+            }
+        ]
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetB",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9273,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7032,
+                "distance": 0.2246355707910346
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.567,
+                "distance": 0.4479672974888795
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.4891,
+                "distance": 0.6706769913264138
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.431,
+                "distance": 0.8929157092047116
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.3849,
+                "distance": 1.1146072870497417
+            }
+        ]
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetC",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9276,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7423,
+                "distance": 0.22427816764157646
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.6223,
+                "distance": 0.44724077946543755
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.5358,
+                "distance": 0.6695900630561887
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.4739,
+                "distance": 0.8914726780888416
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.4264,
+                "distance": 1.1128111707631305
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "dl2",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.995,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.9752,
+                "distance": 0.2251280786789903
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.8812,
+                "distance": 0.4457400682479053
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.8242,
+                "distance": 0.6665000681601997
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.7768,
+                "distance": 0.8871645047843031
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.7308,
+                "distance": 1.107542203993063
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetA",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9954,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.9894,
+                "distance": 0.21549086518516022
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.9817,
+                "distance": 0.4257378600454053
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.9727,
+                "distance": 0.6361417276715527
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.9617,
+                "distance": 0.8464246247557485
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.946,
+                "distance": 1.0563667625974003
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetB",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.996,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.987,
+                "distance": 0.21913348667886776
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.9652,
+                "distance": 0.4332479626888704
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.938,
+                "distance": 0.6475137285832363
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.9123,
+                "distance": 0.8616628219292184
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.8827,
+                "distance": 1.0754833359304714
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetC",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.995,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.989,
+                "distance": 0.2128555021558302
+            },
+            {
+                "epsilon": 0.02,
+                "accuracy": 0.9813,
+                "distance": 0.42051459438872724
+            },
+            {
+                "epsilon": 0.03,
+                "accuracy": 0.9744,
+                "distance": 0.6283261493235957
+            },
+            {
+                "epsilon": 0.04,
+                "accuracy": 0.965,
+                "distance": 0.8360147384647733
+            },
+            {
+                "epsilon": 0.05,
+                "accuracy": 0.9527,
+                "distance": 1.0433635613299483
+            }
+        ]
+    }
+]

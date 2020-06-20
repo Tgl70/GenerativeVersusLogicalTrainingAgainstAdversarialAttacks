@@ -24,6 +24,7 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
     # Accuracy counter
     correct = 0
     adv_examples = []
+    mean_distance = 0
     # Loop over all examples in test set
     for data, target in test_loader:
         # Send the data and label to the device
@@ -51,8 +52,11 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
         output = model(perturbed_data)
         # Check for success
         final_pred = output.max(1, keepdim=True)[1] # get the index of the max log-probability
+        mean_distance += euclidean_distance(data, perturbed_data)
+
         if final_pred.item() == target.item():
             correct += 1
+        '''
             # Special case for saving 0 epsilon examples
             if (epsilon == 0) and (len(adv_examples) < 5):
                 adv_ex = perturbed_data.squeeze().detach().cpu().numpy()
@@ -75,12 +79,25 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
                 else:
                     img = Image.fromarray(np.uint8(adv_ex * 255), 'L')
                 img.save(f"FGSM_images/{dataset}_{dtype}_e{epsilon}_i{init_pred.item()}_f{final_pred.item()}.png")
+        '''
 
     # Calculate final accuracy for this epsilon
     final_acc = correct/float(len(test_loader))
-    print(f"        Epsilon: {epsilon}\tTest Accuracy: {final_acc} ({correct}/{len(test_loader)})")
+    mean_distance /= len(test_loader)
+    print(f"        Epsilon: {epsilon}\tTest Accuracy: {final_acc} ({correct}/{len(test_loader)})\tMean Distance: {mean_distance}")
     # Return the accuracy and an adversarial example
-    return final_acc, adv_examples
+    return final_acc, adv_examples, mean_distance
+
+
+def euclidean_distance(image1, image2):
+    img1 = image1.detach().cpu().numpy()
+    img2 = image2.detach().cpu().numpy()
+    euclidean_distance = 0
+    for j in range(len(img1[0][0])):
+        for k in range(len(img1[0][0][0])):
+            euclidean_distance += (img1[0][0][j][k] - img2[0][0][j][k]) ** 2
+    euclidean_distance = np.sqrt(euclidean_distance)
+    return euclidean_distance
 
 
 if __name__ == "__main__":
@@ -100,7 +117,7 @@ if __name__ == "__main__":
         ]
     }
 
-    epsilons = [0, .01, .02, .03, .04, .05]
+    epsilons = [0, .0025, .005, .0075, .01, .0125, .015]
 
     report_file = f'reports/FGSM_Attack.json'
     data_dict = []
@@ -120,7 +137,7 @@ if __name__ == "__main__":
             if dataset == 'mnist' or dataset == 'fashion_mnist':
                 transform_train = transforms.Compose([transforms.ToTensor()])
                 transform_test = transforms.Compose([transforms.ToTensor()])
-                model = MnistNet().to(device)
+                model = MnistNet(dim=1).to(device)
 
             elif dataset == 'cifar10':
                 transform_train = transforms.Compose([
@@ -131,7 +148,7 @@ if __name__ == "__main__":
                 transform_test = transforms.Compose([
                     transforms.ToTensor(),
                 ])
-                model = ResNet18().to(device)
+                model = ResNet18(dim=3).to(device)
 
             Xy_test = MyDataset(dataset=dataset, dtype='datasetA', train=False, transform=transform_test)
             test_loader = torch.utils.data.DataLoader(Xy_test, shuffle=True, batch_size=1, **kwargs)
@@ -148,10 +165,11 @@ if __name__ == "__main__":
             }
 
             for eps in epsilons:
-                acc, ex = test(model, device, test_loader, eps, dataset, dtype)
+                acc, ex, distance = test(model, device, test_loader, eps, dataset, dtype)
                 eps_dict = {
                     'epsilon': eps,
-                    'accuracy': acc
+                    'accuracy': acc,
+                    'distance': distance
                 }
                 model_dict['attacks'].append(eps_dict)
             
