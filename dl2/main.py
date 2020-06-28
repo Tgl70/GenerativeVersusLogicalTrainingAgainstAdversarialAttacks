@@ -1,4 +1,4 @@
-from models import MnistNet, ResNet18
+from models import MnistNet, ResNet18, GTSRBNet
 from torchvision import transforms
 from getDatasets import MyDataset
 from oracles import DL2_Oracle
@@ -172,14 +172,12 @@ if __name__ == "__main__":
 
     elif args.dataset == 'gtsrb':
         transform_train = transforms.Compose([
-            transforms.RandomCrop(32, padding=4),
-            transforms.RandomHorizontalFlip(),
             transforms.ToTensor(),
         ])
         transform_test = transforms.Compose([
             transforms.ToTensor(),
         ])
-        model = ResNet18(dim=1).to(device)
+        model = GTSRBNet(dim=1).to(device)
 
     optimizer = optim.Adam(model.parameters(), lr=0.0001)
 

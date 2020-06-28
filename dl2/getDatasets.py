@@ -70,9 +70,6 @@ class MyDataset(torch.utils.data.dataset.Dataset):
         if self.dataset == 'cifar10':
             img = Image.fromarray(img, 'RGB')
 
-        if self.dataset == 'gtsrb':
-            img = Image.fromarray(img[:, :, 0], 'L')
-
         if self.transform is not None:
             img = self.transform(img)
 
