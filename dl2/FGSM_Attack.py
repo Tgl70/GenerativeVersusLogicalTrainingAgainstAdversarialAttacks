@@ -124,7 +124,7 @@ if __name__ == "__main__":
     }
 
     epsilons = [0, .0025, .005, .0075, .01, .0125, .015]
-    # epsilons = [0, .001, .002, .003, .04, .05, .06]
+    epsilons_gtsrb = [0, .001, .002, .003, .004, .005, .006]
 
     report_file = f'reports/FGSM_Attack.json'
     data_dict = []
