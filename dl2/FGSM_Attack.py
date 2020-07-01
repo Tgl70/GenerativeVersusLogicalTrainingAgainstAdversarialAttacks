@@ -1,4 +1,4 @@
-from models import MnistNet, ResNet18
+from models import MnistNet, ResNet18, GTSRBNet
 from torchvision import transforms
 from getDatasets import MyDataset
 import matplotlib.pyplot as plt
@@ -101,7 +101,7 @@ def euclidean_distance(image1, image2):
 
 
 if __name__ == "__main__":
-    datasets = ['fashion_mnist', 'mnist']
+    datasets = ['fashion_mnist', 'mnist', 'gtsrb']
     model_names_dict = {
         'mnist': [
             'dl2/mnist_dl2_88.pth',
@@ -114,10 +114,17 @@ if __name__ == "__main__":
             'datasetA/fashion_mnist_datasetA_98.pth',
             'datasetB/fashion_mnist_datasetB_81.pth',
             'datasetC/fashion_mnist_datasetC_96.pth'
+        ],
+        'gtsrb': [
+            'dl2/gtsrb_dl2_95.pth',
+            'datasetA/gtsrb_datasetA_78.pth',
+            'datasetB/gtsrb_datasetB_94.pth',
+            'datasetC/gtsrb_datasetC_78.pth'
         ]
     }
 
     epsilons = [0, .0025, .005, .0075, .01, .0125, .015]
+    # epsilons = [0, .001, .002, .003, .04, .05, .06]
 
     report_file = f'reports/FGSM_Attack.json'
     data_dict = []
@@ -138,6 +145,11 @@ if __name__ == "__main__":
                 transform_train = transforms.Compose([transforms.ToTensor()])
                 transform_test = transforms.Compose([transforms.ToTensor()])
                 model = MnistNet(dim=1).to(device)
+
+            elif dataset == 'gtsrb':
+                transform_train = transforms.Compose([transforms.ToTensor()])
+                transform_test = transforms.Compose([transforms.ToTensor()])
+                model = GTSRBNet(dim=1).to(device)
 
             elif dataset == 'cifar10':
                 transform_train = transforms.Compose([

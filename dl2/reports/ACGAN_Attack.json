@@ -38,5 +38,25 @@
         "dataset": "mnist",
         "dtype": "datasetC",
         "accuracy": 0.9986
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "dl2",
+        "accuracy": 0.753
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetA",
+        "accuracy": 0.7678
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetB",
+        "accuracy": 0.9935
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetC",
+        "accuracy": 0.7528
     }
 ]

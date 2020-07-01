@@ -159,6 +159,11 @@ if __name__ == "__main__":
         transform_test = transforms.Compose([transforms.ToTensor()])
         model = MnistNet(dim=1).to(device)
 
+    elif args.dataset == 'gtsrb':
+        transform_train = transforms.Compose([transforms.ToTensor()])
+        transform_test = transforms.Compose([transforms.ToTensor()])
+        model = GTSRBNet(dim=1).to(device)
+
     elif args.dataset == 'cifar10':
         transform_train = transforms.Compose([
             transforms.RandomCrop(32, padding=4),
@@ -169,15 +174,6 @@ if __name__ == "__main__":
             transforms.ToTensor(),
         ])
         model = ResNet18(dim=3).to(device)
-
-    elif args.dataset == 'gtsrb':
-        transform_train = transforms.Compose([
-            transforms.ToTensor(),
-        ])
-        transform_test = transforms.Compose([
-            transforms.ToTensor(),
-        ])
-        model = GTSRBNet(dim=1).to(device)
 
     optimizer = optim.Adam(model.parameters(), lr=0.0001)
 

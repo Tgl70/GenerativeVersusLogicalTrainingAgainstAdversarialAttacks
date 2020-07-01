@@ -326,5 +326,169 @@
                 "distance": 0.3167188633883219
             }
         ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "dl2",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9908872901678657,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9776978417266187,
+                "distance": 0.11289186317885007
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9621103117505995,
+                "distance": 0.2256722207372814
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9450839328537171,
+                "distance": 0.33835930790091423
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.9270983213429257,
+                "distance": 0.4509414748554086
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.902158273381295,
+                "distance": 0.5634961019492098
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.8726618705035971,
+                "distance": 0.6759823646600525
+            }
+        ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetA",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9932853717026379,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9858513189448441,
+                "distance": 0.11319745342282653
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9611510791366906,
+                "distance": 0.22628930685731996
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9330935251798561,
+                "distance": 0.3392928545278582
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.9107913669064748,
+                "distance": 0.4521990535434241
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.8810551558752998,
+                "distance": 0.5650794836311838
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.8477218225419664,
+                "distance": 0.6778957233428201
+            }
+        ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetB",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9913669064748202,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9609112709832134,
+                "distance": 0.112959132698869
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9031175059952038,
+                "distance": 0.2258121474149219
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.8321342925659473,
+                "distance": 0.3385764406277633
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7640287769784173,
+                "distance": 0.45124218887245465
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.7009592326139089,
+                "distance": 0.5638816387796194
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.6426858513189448,
+                "distance": 0.676455837617808
+            }
+        ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetC",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9913669064748202,
+                "distance": 0.0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9772182254196643,
+                "distance": 0.1129749954664289
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.950599520383693,
+                "distance": 0.2258450026877431
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.926378896882494,
+                "distance": 0.3386272032049755
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.891127098321343,
+                "distance": 0.4513119570919897
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.8527577937649881,
+                "distance": 0.5639713466003952
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.8127098321342926,
+                "distance": 0.676567471713517
+            }
+        ]
     }
 ]
