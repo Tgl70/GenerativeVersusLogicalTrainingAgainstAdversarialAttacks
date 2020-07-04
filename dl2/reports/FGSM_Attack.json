@@ -6,37 +6,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9218,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.8721,
-                "distance": 0.05612267549958
+                "mean_distance": 0.056122675499580166,
+                "mean_adversorial_distance": 0.024236524012374215,
+                "max_distance": 0.0692819741445379,
+                "max_adversorial_distance": 0.06763869798288161
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.8182,
-                "distance": 0.11208994194969184
+                "mean_distance": 0.11208993140154011,
+                "mean_adversorial_distance": 0.07094160126388308,
+                "max_distance": 0.13845976423196,
+                "max_adversorial_distance": 0.13845976423196
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.7674,
-                "distance": 0.16792734149490193
+                "mean_distance": 0.167927341494903,
+                "mean_adversorial_distance": 0.12383502162903315,
+                "max_distance": 0.20755076160748934,
+                "max_adversorial_distance": 0.20755076160748934
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.7207,
-                "distance": 0.2236093462703062
+                "mean_distance": 0.22360936738395826,
+                "mean_adversorial_distance": 0.178660564534469,
+                "max_distance": 0.2766695579315822,
+                "max_adversorial_distance": 0.2766695579315822
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.6772,
-                "distance": 0.2792631274946961
+                "mean_distance": 0.2792631274946985,
+                "mean_adversorial_distance": 0.2348676932917093,
+                "max_distance": 0.3457994159157706,
+                "max_adversorial_distance": 0.3457994159157706
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.6435,
-                "distance": 0.3348425763417575
+                "mean_distance": 0.33484257634175846,
+                "mean_adversorial_distance": 0.289792552048406,
+                "max_distance": 0.4149348251736597,
+                "max_adversorial_distance": 0.4149348251736597
             }
         ]
     },
@@ -47,37 +68,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9251,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.8729,
-                "distance": 0.056222948678254246
+                "mean_distance": 0.05622294867825437,
+                "mean_adversorial_distance": 0.02558665323654503,
+                "max_distance": 0.0691013155598075,
+                "max_adversorial_distance": 0.06887483313988602
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.8173,
-                "distance": 0.11229153792071418
+                "mean_distance": 0.11229153792071458,
+                "mean_adversorial_distance": 0.07342264029678472,
+                "max_distance": 0.13809817475118644,
+                "max_adversorial_distance": 0.13767979604661928
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.7662,
-                "distance": 0.16823119064355763
+                "mean_distance": 0.168231190643557,
+                "mean_adversorial_distance": 0.12656822489984387,
+                "max_distance": 0.20700801325944299,
+                "max_adversorial_distance": 0.206426586625667
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.7198,
-                "distance": 0.2240187152462196
+                "mean_distance": 0.22401871524621983,
+                "mean_adversorial_distance": 0.18164041016135843,
+                "max_distance": 0.2759457263494102,
+                "max_adversorial_distance": 0.27519203238062606
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.6864,
-                "distance": 0.27977795446858744
+                "mean_distance": 0.27977795446858694,
+                "mean_adversorial_distance": 0.23530764354406813,
+                "max_distance": 0.344894526749641,
+                "max_adversorial_distance": 0.344894526749641
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.6504,
-                "distance": 0.33546272447444964
+                "mean_distance": 0.3354627244744484,
+                "mean_adversorial_distance": 0.29122202286879406,
+                "max_distance": 0.41384889263772817,
+                "max_adversorial_distance": 0.41384889263772817
             }
         ]
     },
@@ -88,37 +130,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9273,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.8704,
-                "distance": 0.056371585348728534
+                "mean_distance": 0.056371585348728055,
+                "mean_adversorial_distance": 0.0273819463788312,
+                "max_distance": 0.06901080999724217,
+                "max_adversorial_distance": 0.06814500966197941
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.8115,
-                "distance": 0.11259318422410733
+                "mean_distance": 0.11259318422410725,
+                "mean_adversorial_distance": 0.07659486890708103,
+                "max_distance": 0.13798676020295453,
+                "max_adversorial_distance": 0.13590119817324167
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.7562,
-                "distance": 0.16868951850004738
+                "mean_distance": 0.16868951850004751,
+                "mean_adversorial_distance": 0.1309488217633649,
+                "max_distance": 0.206933696430452,
+                "max_adversorial_distance": 0.204172576077034
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.7032,
-                "distance": 0.22463557079103585
+                "mean_distance": 0.2246355707910356,
+                "mean_adversorial_distance": 0.18740507346776497,
+                "max_distance": 0.27588996640466185,
+                "max_adversorial_distance": 0.27588996640466185
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.6612,
-                "distance": 0.2805540707282817
+                "mean_distance": 0.2805540707282823,
+                "mean_adversorial_distance": 0.24327851899714978,
+                "max_distance": 0.34482403364924136,
+                "max_adversorial_distance": 0.34482403364924136
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.6265,
-                "distance": 0.3364001899606979
+                "mean_distance": 0.33640018996069804,
+                "mean_adversorial_distance": 0.29887496230863053,
+                "max_distance": 0.41370706549612024,
+                "max_adversorial_distance": 0.41370706549612024
             }
         ]
     },
@@ -129,37 +192,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9276,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.8793,
-                "distance": 0.05628621349703309
+                "mean_distance": 0.05628621349703343,
+                "mean_adversorial_distance": 0.02494590850981136,
+                "max_distance": 0.06887482367447213,
+                "max_adversorial_distance": 0.06855648646483231
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.8289,
-                "distance": 0.11241927178633057
+                "mean_distance": 0.11241927178633114,
+                "mean_adversorial_distance": 0.07180173024574024,
+                "max_distance": 0.13767978457131136,
+                "max_adversorial_distance": 0.13711297615604137
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.7822,
-                "distance": 0.16842440194951122
+                "mean_distance": 0.1684244019495101,
+                "mean_adversorial_distance": 0.12434605432233921,
+                "max_distance": 0.20642657283618346,
+                "max_adversorial_distance": 0.20566946258691093
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.7423,
-                "distance": 0.2242781676415763
+                "mean_distance": 0.22427816764157574,
+                "mean_adversorial_distance": 0.17836026624552317,
+                "max_distance": 0.2751220477293329,
+                "max_adversorial_distance": 0.27422595767805547
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.7082,
-                "distance": 0.28010432652244277
+                "mean_distance": 0.2801043265224429,
+                "mean_adversorial_distance": 0.23288250245361358,
+                "max_distance": 0.3438270872915209,
+                "max_adversorial_distance": 0.342782448082463
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.6746,
-                "distance": 0.33585756134469036
+                "mean_distance": 0.33585756134468964,
+                "mean_adversorial_distance": 0.2885397811980776,
+                "max_distance": 0.4125432978373454,
+                "max_adversorial_distance": 0.4113389334605139
             }
         ]
     },
@@ -170,37 +254,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.995,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.9934,
-                "distance": 0.056824306862827904
+                "mean_distance": 0.05682430686282837,
+                "mean_adversorial_distance": 0.013464897051491665,
+                "max_distance": 0.06614376867875121,
+                "max_adversorial_distance": 0.06020795942483383
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.9897,
-                "distance": 0.11338478349457998
+                "mean_distance": 0.11338478349457998,
+                "mean_adversorial_distance": 0.056701613745715536,
+                "max_distance": 0.13228754101836449,
+                "max_adversorial_distance": 0.1256980178421277
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.9854,
-                "distance": 0.1697232904722992
+                "mean_distance": 0.16972329047229928,
+                "mean_adversorial_distance": 0.10822030216358085,
+                "max_distance": 0.19843130842988355,
+                "max_adversorial_distance": 0.188547026161194
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.9752,
-                "distance": 0.2251280786789898
+                "mean_distance": 0.22512807867898887,
+                "mean_adversorial_distance": 0.17299945716470758,
+                "max_distance": 0.2638467812258712,
+                "max_adversorial_distance": 0.2497064342497411
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.956,
-                "distance": 0.28041348865399884
+                "mean_distance": 0.28041348865399846,
+                "mean_adversorial_distance": 0.23922631200053707,
+                "max_distance": 0.3289582350516212,
+                "max_adversorial_distance": 0.3156650219056363
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.9239,
-                "distance": 0.3354629082217365
+                "mean_distance": 0.3354629082217361,
+                "mean_adversorial_distance": 0.3020177098231813,
+                "max_distance": 0.3934793475766102,
+                "max_adversorial_distance": 0.383741593783578
             }
         ]
     },
@@ -211,37 +316,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9954,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.9948,
-                "distance": 0.05450394609379251
+                "mean_distance": 0.05450394609379267,
+                "mean_adversorial_distance": 0.006432985148105609,
+                "max_distance": 0.06139013281139635,
+                "max_adversorial_distance": 0.05766280114584724
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.9931,
-                "distance": 0.10869963327729557
+                "mean_distance": 0.10869963327729486,
+                "mean_adversorial_distance": 0.0365895584776731,
+                "max_distance": 0.12257648291637707,
+                "max_adversorial_distance": 0.11636244791760075
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.9914,
-                "distance": 0.16263543370934505
+                "mean_distance": 0.16263543370934566,
+                "mean_adversorial_distance": 0.0763943920129805,
+                "max_distance": 0.18386472383321684,
+                "max_adversorial_distance": 0.17623994796481546
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.9894,
-                "distance": 0.21549086518516006
+                "mean_distance": 0.21549086518516022,
+                "mean_adversorial_distance": 0.12361923201606173,
+                "max_distance": 0.24289815593462746,
+                "max_adversorial_distance": 0.23387962495436304
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.987,
-                "distance": 0.26820678827504796
+                "mean_distance": 0.26820678827504696,
+                "mean_adversorial_distance": 0.17498649318984677,
+                "max_distance": 0.302509513564898,
+                "max_adversorial_distance": 0.29154859666393135
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.9856,
-                "distance": 0.3206478741953842
+                "mean_distance": 0.3206478741953866,
+                "mean_adversorial_distance": 0.2206976672939389,
+                "max_distance": 0.3622837045940978,
+                "max_adversorial_distance": 0.35405979892276884
             }
         ]
     },
@@ -252,37 +378,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.996,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.9943,
-                "distance": 0.05538722228483871
+                "mean_distance": 0.05538722228483912,
+                "mean_adversorial_distance": 0.01657825880577137,
+                "max_distance": 0.06412876216994035,
+                "max_adversorial_distance": 0.05984352522704804
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.9924,
-                "distance": 0.11048041537093166
+                "mean_distance": 0.11048041537093167,
+                "mean_adversorial_distance": 0.05229273211706125,
+                "max_distance": 0.12780664159730806,
+                "max_adversorial_distance": 0.12518408677776818
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.9898,
-                "distance": 0.16532584239141593
+                "mean_distance": 0.16532584239141448,
+                "mean_adversorial_distance": 0.09984967479929288,
+                "max_distance": 0.19140039195216169,
+                "max_adversorial_distance": 0.18788158361591542
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.987,
-                "distance": 0.21913348667886717
+                "mean_distance": 0.21913348667886645,
+                "mean_adversorial_distance": 0.15157928234522045,
+                "max_distance": 0.25434624790711835,
+                "max_adversorial_distance": 0.24930594510960613
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.9829,
-                "distance": 0.272808203439662
+                "mean_distance": 0.27280820343966034,
+                "mean_adversorial_distance": 0.20978353181053885,
+                "max_distance": 0.31696414417743285,
+                "max_adversorial_distance": 0.31073712284532706
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.9777,
-                "distance": 0.32622109274483
+                "mean_distance": 0.32622109274483035,
+                "mean_adversorial_distance": 0.2700594403571224,
+                "max_distance": 0.3802679967372435,
+                "max_adversorial_distance": 0.37270302276859135
             }
         ]
     },
@@ -293,37 +440,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.995,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
                 "epsilon": 0.0025,
                 "accuracy": 0.9932,
-                "distance": 0.05383554136763857
+                "mean_distance": 0.05383554136763852,
+                "mean_adversorial_distance": 0.014306191664679259,
+                "max_distance": 0.061135072447754416,
+                "max_adversorial_distance": 0.05722759396760412
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.9911,
-                "distance": 0.10736930210116576
+                "mean_distance": 0.10736930210116591,
+                "mean_adversorial_distance": 0.04710166176269249,
+                "max_distance": 0.12227014603804687,
+                "max_adversorial_distance": 0.11445519761824066
             },
             {
                 "epsilon": 0.0075,
                 "accuracy": 0.9902,
-                "distance": 0.16064870166668438
+                "mean_distance": 0.16064870166668324,
+                "mean_adversorial_distance": 0.0787695372538255,
+                "max_distance": 0.18340521833346277,
+                "max_adversorial_distance": 0.17428420951168422
             },
             {
                 "epsilon": 0.01,
                 "accuracy": 0.989,
-                "distance": 0.21285550215582943
+                "mean_distance": 0.21285550215582952,
+                "mean_adversorial_distance": 0.11625414913164399,
+                "max_distance": 0.2425026673652964,
+                "max_adversorial_distance": 0.23154940700044319
             },
             {
                 "epsilon": 0.0125,
                 "accuracy": 0.9871,
-                "distance": 0.2649235504918255
+                "mean_distance": 0.2649235504918248,
+                "mean_adversorial_distance": 0.16287267611297188,
+                "max_distance": 0.30186920039194365,
+                "max_adversorial_distance": 0.28812717285991074
             },
             {
                 "epsilon": 0.015,
                 "accuracy": 0.9853,
-                "distance": 0.3167188633883219
+                "mean_distance": 0.3167188633883205,
+                "mean_adversorial_distance": 0.20969781716384228,
+                "max_distance": 0.3592700807293721,
+                "max_adversorial_distance": 0.34332710398192373
             }
         ]
     },
@@ -334,37 +502,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9908872901678657,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
-                "epsilon": 0.0025,
-                "accuracy": 0.9776978417266187,
-                "distance": 0.11289186317885007
+                "epsilon": 0.001,
+                "accuracy": 0.984652278177458,
+                "mean_distance": 0.04515654638335927,
+                "mean_adversorial_distance": 0.018687507371209288,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.046000072084781844
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.9808153477218226,
+                "mean_distance": 0.09031339680031103,
+                "mean_adversorial_distance": 0.04829997336706373,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200017219014933
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9762589928057553,
+                "mean_distance": 0.1354705191451195,
+                "mean_adversorial_distance": 0.08496624479890566,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800021390642736
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9690647482014388,
+                "mean_distance": 0.18061823205098335,
+                "mean_adversorial_distance": 0.12969502640210098,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.9621103117505995,
-                "distance": 0.2256722207372814
+                "mean_distance": 0.22567222073728183,
+                "mean_adversorial_distance": 0.17456040598112607,
+                "max_distance": 0.23000009017795991,
+                "max_adversorial_distance": 0.23000008855826867
             },
             {
-                "epsilon": 0.0075,
-                "accuracy": 0.9450839328537171,
-                "distance": 0.33835930790091423
-            },
-            {
-                "epsilon": 0.01,
-                "accuracy": 0.9270983213429257,
-                "distance": 0.4509414748554086
-            },
-            {
-                "epsilon": 0.0125,
-                "accuracy": 0.902158273381295,
-                "distance": 0.5634961019492098
-            },
-            {
-                "epsilon": 0.015,
-                "accuracy": 0.8726618705035971,
-                "distance": 0.6759823646600525
+                "epsilon": 0.006,
+                "accuracy": 0.9556354916067147,
+                "mean_distance": 0.27074123568779346,
+                "mean_adversorial_distance": 0.21917404687218092,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866
             }
         ]
     },
@@ -375,37 +564,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9932853717026379,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
-                "epsilon": 0.0025,
-                "accuracy": 0.9858513189448441,
-                "distance": 0.11319745342282653
+                "epsilon": 0.001,
+                "accuracy": 0.9920863309352518,
+                "mean_distance": 0.04527878198424314,
+                "mean_adversorial_distance": 0.006969684072439794,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.046000074109443935
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.988009592326139,
+                "mean_distance": 0.09055786853740709,
+                "mean_adversorial_distance": 0.040440117708097564,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200017283802117
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9839328537170264,
+                "mean_distance": 0.13583722819286434,
+                "mean_adversorial_distance": 0.08013847125894072,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800069495495446
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9738609112709832,
+                "mean_distance": 0.1811076522226045,
+                "mean_adversorial_distance": 0.13633939504619988,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.9611510791366906,
-                "distance": 0.22628930685731996
+                "mean_distance": 0.22628930685731946,
+                "mean_adversorial_distance": 0.18977764669932656,
+                "max_distance": 0.23000009017796172,
+                "max_adversorial_distance": 0.23000009017796172
             },
             {
-                "epsilon": 0.0075,
-                "accuracy": 0.9330935251798561,
-                "distance": 0.3392928545278582
-            },
-            {
-                "epsilon": 0.01,
-                "accuracy": 0.9107913669064748,
-                "distance": 0.4521990535434241
-            },
-            {
-                "epsilon": 0.0125,
-                "accuracy": 0.8810551558752998,
-                "distance": 0.5650794836311838
-            },
-            {
-                "epsilon": 0.015,
-                "accuracy": 0.8477218225419664,
-                "distance": 0.6778957233428201
+                "epsilon": 0.006,
+                "accuracy": 0.9489208633093525,
+                "mean_distance": 0.2714852179894619,
+                "mean_adversorial_distance": 0.23919470659447198,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866
             }
         ]
     },
@@ -416,37 +626,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9913669064748202,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
-                "epsilon": 0.0025,
-                "accuracy": 0.9609112709832134,
-                "distance": 0.112959132698869
+                "epsilon": 0.001,
+                "accuracy": 0.984652278177458,
+                "mean_distance": 0.04518345111673607,
+                "mean_adversorial_distance": 0.020078074058104772,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.04600009160198503
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.9731414868105516,
+                "mean_distance": 0.09036721240221246,
+                "mean_adversorial_distance": 0.06232835059943755,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200018644332886
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9513189448441247,
+                "mean_distance": 0.13555123379497375,
+                "mean_adversorial_distance": 0.11336633500644323,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800069754645292
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9287769784172661,
+                "mean_distance": 0.1807262863401943,
+                "mean_adversorial_distance": 0.16142982248956367,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.9031175059952038,
-                "distance": 0.2258121474149219
+                "mean_distance": 0.22581214741492223,
+                "mean_adversorial_distance": 0.20903675808922167,
+                "max_distance": 0.23000009025894386,
+                "max_adversorial_distance": 0.23000009025894386
             },
             {
-                "epsilon": 0.0075,
-                "accuracy": 0.8321342925659473,
-                "distance": 0.3385764406277633
-            },
-            {
-                "epsilon": 0.01,
-                "accuracy": 0.7640287769784173,
-                "distance": 0.45124218887245465
-            },
-            {
-                "epsilon": 0.0125,
-                "accuracy": 0.7009592326139089,
-                "distance": 0.5638816387796194
-            },
-            {
-                "epsilon": 0.015,
-                "accuracy": 0.6426858513189448,
-                "distance": 0.676455837617808
+                "epsilon": 0.006,
+                "accuracy": 0.8769784172661871,
+                "mean_distance": 0.2709123477191372,
+                "mean_adversorial_distance": 0.25605584859067193,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866
             }
         ]
     },
@@ -457,37 +688,58 @@
             {
                 "epsilon": 0,
                 "accuracy": 0.9913669064748202,
-                "distance": 0.0
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0
             },
             {
-                "epsilon": 0.0025,
-                "accuracy": 0.9772182254196643,
-                "distance": 0.1129749954664289
+                "epsilon": 0.001,
+                "accuracy": 0.9870503597122302,
+                "mean_distance": 0.045189799459587746,
+                "mean_adversorial_distance": 0.015333314788582807,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.04600007232773703
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.9817745803357314,
+                "mean_distance": 0.09037990281613445,
+                "mean_adversorial_distance": 0.04840725623357016,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200018644332886
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9733812949640288,
+                "mean_distance": 0.13557027764042423,
+                "mean_adversorial_distance": 0.09288328458131395,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800056116876608
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9628297362110312,
+                "mean_distance": 0.18075176865376844,
+                "mean_adversorial_distance": 0.14066465248381457,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771
             },
             {
                 "epsilon": 0.005,
                 "accuracy": 0.950599520383693,
-                "distance": 0.2258450026877431
+                "mean_distance": 0.22584500268774257,
+                "mean_adversorial_distance": 0.18891317710753608,
+                "max_distance": 0.23000009082583608,
+                "max_adversorial_distance": 0.23000008977303912
             },
             {
-                "epsilon": 0.0075,
-                "accuracy": 0.926378896882494,
-                "distance": 0.3386272032049755
-            },
-            {
-                "epsilon": 0.01,
-                "accuracy": 0.891127098321343,
-                "distance": 0.4513119570919897
-            },
-            {
-                "epsilon": 0.0125,
-                "accuracy": 0.8527577937649881,
-                "distance": 0.5639713466003952
-            },
-            {
-                "epsilon": 0.015,
-                "accuracy": 0.8127098321342926,
-                "distance": 0.676567471713517
+                "epsilon": 0.006,
+                "accuracy": 0.9390887290167865,
+                "mean_distance": 0.2709524079687657,
+                "mean_adversorial_distance": 0.23576932810250842,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866
             }
         ]
     }

@@ -25,6 +25,9 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
     correct = 0
     adv_examples = []
     mean_distance = 0
+    mean_adversorial_distance = 0
+    max_distance = 0
+    max_adversorial_distance = 0
     # Loop over all examples in test set
     for data, target in test_loader:
         # Send the data and label to the device
@@ -52,10 +55,19 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
         output = model(perturbed_data)
         # Check for success
         final_pred = output.max(1, keepdim=True)[1] # get the index of the max log-probability
-        mean_distance += euclidean_distance(data, perturbed_data)
+
+        distance = euclidean_distance(data, perturbed_data)
+        mean_distance += distance
+        if distance > max_distance:
+            max_distance = distance
 
         if final_pred.item() == target.item():
             correct += 1
+        else:
+            mean_adversorial_distance += distance
+            if distance > max_adversorial_distance:
+                max_adversorial_distance = distance
+
         '''
             # Special case for saving 0 epsilon examples
             if (epsilon == 0) and (len(adv_examples) < 5):
@@ -84,9 +96,10 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
     # Calculate final accuracy for this epsilon
     final_acc = correct/float(len(test_loader))
     mean_distance /= len(test_loader)
-    print(f"        Epsilon: {epsilon}\tTest Accuracy: {final_acc} ({correct}/{len(test_loader)})\tMean Distance: {mean_distance}")
+    mean_adversorial_distance /= (len(test_loader) - correct)
+    print(f"        Epsilon: {epsilon}\tTest Accuracy: {final_acc:.4f} ({correct}/{len(test_loader)})\tMean Distance: {mean_distance:.4f}\tMean Adversorial Distance: {mean_adversorial_distance:.4f}\tMax Distance: {max_distance:.4f}\tMax Adversorial Distance: {max_adversorial_distance:.4f}")
     # Return the accuracy and an adversarial example
-    return final_acc, adv_examples, mean_distance
+    return final_acc, adv_examples, mean_distance, mean_adversorial_distance, max_distance, max_adversorial_distance
 
 
 def euclidean_distance(image1, image2):
@@ -122,15 +135,18 @@ if __name__ == "__main__":
             'datasetC/gtsrb_datasetC_78.pth'
         ]
     }
-
-    epsilons = [0, .0025, .005, .0075, .01, .0125, .015]
-    epsilons_gtsrb = [0, .001, .002, .003, .004, .005, .006]
+    epsilons_dict = {
+        'mnist': [0, .0025, .005, .0075, .01, .0125, .015],
+        'fashion_mnist': [0, .0025, .005, .0075, .01, .0125, .015],
+        'gtsrb': [0, .001, .002, .003, .004, .005, .006]
+    }
 
     report_file = f'reports/FGSM_Attack.json'
     data_dict = []
 
     for dataset in datasets:
         model_names = model_names_dict.get(dataset)
+        epsilons = epsilons_dict.get(dataset)
 
         for model_name in model_names:
             model_path = f'models/{dataset}/{model_name}'
@@ -177,11 +193,14 @@ if __name__ == "__main__":
             }
 
             for eps in epsilons:
-                acc, ex, distance = test(model, device, test_loader, eps, dataset, dtype)
+                acc, ex, mean_distance, mean_adversorial_distance, max_distance, max_adversorial_distance = test(model, device, test_loader, eps, dataset, dtype)
                 eps_dict = {
                     'epsilon': eps,
                     'accuracy': acc,
-                    'distance': distance
+                    'mean_distance': mean_distance,
+                    'mean_adversorial_distance': mean_adversorial_distance,
+                    'max_distance': max_distance,
+                    'max_adversorial_distance': max_adversorial_distance
                 }
                 model_dict['attacks'].append(eps_dict)
             
