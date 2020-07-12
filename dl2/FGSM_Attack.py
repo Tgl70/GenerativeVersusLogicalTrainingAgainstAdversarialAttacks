@@ -23,6 +23,8 @@ def fgsm_attack(image, epsilon, data_grad):
 def test(model, device, test_loader, epsilon, dataset, dtype):
     # Accuracy counter
     correct = 0
+    valid_inputs = 0
+    invalid_inputs = 0
     adv_examples = []
     mean_distance = 0
     mean_adversorial_distance = 0
@@ -40,6 +42,7 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
         init_pred = output.max(1, keepdim=True)[1] # get the index of the max log-probability
         # If the initial prediction is wrong, dont bother attacking, just move on
         if init_pred.item() != target.item():
+            valid_inputs += 1
             continue
         # Calculate the loss
         loss = F.nll_loss(output, target)
@@ -57,16 +60,20 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
         final_pred = output.max(1, keepdim=True)[1] # get the index of the max log-probability
 
         distance = euclidean_distance(data, perturbed_data)
-        mean_distance += distance
-        if distance > max_distance:
-            max_distance = distance
+        if distance <= 0.3:
+            valid_inputs += 1
+            mean_distance += distance
+            if distance > max_distance:
+                max_distance = distance
 
-        if final_pred.item() == target.item():
-            correct += 1
+            if final_pred.item() == target.item():
+                correct += 1
+            else:
+                mean_adversorial_distance += distance
+                if distance > max_adversorial_distance:
+                    max_adversorial_distance = distance
         else:
-            mean_adversorial_distance += distance
-            if distance > max_adversorial_distance:
-                max_adversorial_distance = distance
+            invalid_inputs += 1
 
         '''
             # Special case for saving 0 epsilon examples
@@ -94,12 +101,15 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
         '''
 
     # Calculate final accuracy for this epsilon
-    final_acc = correct/float(len(test_loader))
-    mean_distance /= len(test_loader)
-    mean_adversorial_distance /= (len(test_loader) - correct)
-    print(f"        Epsilon: {epsilon}\tTest Accuracy: {final_acc:.4f} ({correct}/{len(test_loader)})\tMean Distance: {mean_distance:.4f}\tMean Adversorial Distance: {mean_adversorial_distance:.4f}\tMax Distance: {max_distance:.4f}\tMax Adversorial Distance: {max_adversorial_distance:.4f}")
+    final_acc = correct/valid_inputs
+    mean_distance /= valid_inputs
+    if (valid_inputs - correct) != 0:
+        mean_adversorial_distance /= (valid_inputs - correct)
+    else:
+        mean_adversorial_distance = 0
+    print(f"        Epsilon: {epsilon}\tTest Accuracy: {final_acc:.4f} ({correct}/{valid_inputs})\tMean Distance: {mean_distance:.4f}\tMean Adversorial Distance: {mean_adversorial_distance:.4f}\tMax Distance: {max_distance:.4f}\tMax Adversorial Distance: {max_adversorial_distance:.4f}\tValid inputs: {valid_inputs}\tInvalid inputs: {invalid_inputs}")
     # Return the accuracy and an adversarial example
-    return final_acc, adv_examples, mean_distance, mean_adversorial_distance, max_distance, max_adversorial_distance
+    return final_acc, adv_examples, mean_distance, mean_adversorial_distance, max_distance, max_adversorial_distance, valid_inputs, invalid_inputs
 
 
 def euclidean_distance(image1, image2):
@@ -193,14 +203,16 @@ if __name__ == "__main__":
             }
 
             for eps in epsilons:
-                acc, ex, mean_distance, mean_adversorial_distance, max_distance, max_adversorial_distance = test(model, device, test_loader, eps, dataset, dtype)
+                acc, ex, mean_distance, mean_adversorial_distance, max_distance, max_adversorial_distance, valid_inputs, invalid_inputs = test(model, device, test_loader, eps, dataset, dtype)
                 eps_dict = {
                     'epsilon': eps,
                     'accuracy': acc,
                     'mean_distance': mean_distance,
                     'mean_adversorial_distance': mean_adversorial_distance,
                     'max_distance': max_distance,
-                    'max_adversorial_distance': max_adversorial_distance
+                    'max_adversorial_distance': max_adversorial_distance,
+                    'valid_inputs': valid_inputs,
+                    'invalid_inputs': invalid_inputs
                 }
                 model_dict['attacks'].append(eps_dict)
             

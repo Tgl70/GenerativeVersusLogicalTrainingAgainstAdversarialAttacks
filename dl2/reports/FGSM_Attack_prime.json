@@ -1,0 +1,914 @@
+[
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "dl2",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9218,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8721,
+                "mean_distance": 0.05612268077004672,
+                "mean_adversorial_distance": 0.02423652401237419,
+                "max_distance": 0.0692819741445379,
+                "max_adversorial_distance": 0.06763869798288161,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8182,
+                "mean_distance": 0.11208994194969191,
+                "mean_adversorial_distance": 0.07094160126388308,
+                "max_distance": 0.13845976423196,
+                "max_adversorial_distance": 0.13845976423196,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7674,
+                "mean_distance": 0.16792735732676506,
+                "mean_adversorial_distance": 0.12383502162903329,
+                "max_distance": 0.20755076160748934,
+                "max_adversorial_distance": 0.20755076160748934,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7207,
+                "mean_distance": 0.2236093462703062,
+                "mean_adversorial_distance": 0.17866056453446916,
+                "max_distance": 0.2766695579315822,
+                "max_adversorial_distance": 0.2766695579315822,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.7233902759526938,
+                "mean_distance": 0.2378380780329337,
+                "mean_adversorial_distance": 0.10973355504020248,
+                "max_distance": 0.2999998758702596,
+                "max_adversorial_distance": 0.29999165347821266,
+                "valid_inputs": 4566,
+                "invalid_inputs": 5434
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.003821656050955414,
+                "mean_distance": 0.00113567542152239,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0.29800912903956467,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 785,
+                "invalid_inputs": 9215
+            }
+        ]
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetA",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9251,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8729,
+                "mean_distance": 0.056222948678254094,
+                "mean_adversorial_distance": 0.02558665323654503,
+                "max_distance": 0.0691013155598075,
+                "max_adversorial_distance": 0.06887483313988602,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8173,
+                "mean_distance": 0.11229153792071406,
+                "mean_adversorial_distance": 0.07342264029678466,
+                "max_distance": 0.13809817475118644,
+                "max_adversorial_distance": 0.13767979604661928,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7662,
+                "mean_distance": 0.16823119064355738,
+                "mean_adversorial_distance": 0.12656822489984398,
+                "max_distance": 0.20700801325944299,
+                "max_adversorial_distance": 0.206426586625667,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7198,
+                "mean_distance": 0.2240187152462197,
+                "mean_adversorial_distance": 0.18164041016135848,
+                "max_distance": 0.2759457263494102,
+                "max_adversorial_distance": 0.27519203238062606,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.7325776658270361,
+                "mean_distance": 0.2427383682622097,
+                "mean_adversorial_distance": 0.11921802805611026,
+                "max_distance": 0.29999986418992275,
+                "max_adversorial_distance": 0.2999834426011222,
+                "valid_inputs": 4764,
+                "invalid_inputs": 5236
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.010568031704095112,
+                "mean_distance": 0.0031238754501632772,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0.2990109326150087,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 757,
+                "invalid_inputs": 9243
+            }
+        ]
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetB",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9273,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8704,
+                "mean_distance": 0.056371585348728305,
+                "mean_adversorial_distance": 0.027381946378831186,
+                "max_distance": 0.06901080999724217,
+                "max_adversorial_distance": 0.06814500966197941,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8115,
+                "mean_distance": 0.1125931842241069,
+                "mean_adversorial_distance": 0.07659486890708105,
+                "max_distance": 0.13798676020295453,
+                "max_adversorial_distance": 0.13590119817324167,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7562,
+                "mean_distance": 0.16868951850004765,
+                "mean_adversorial_distance": 0.1309488217633649,
+                "max_distance": 0.206933696430452,
+                "max_adversorial_distance": 0.204172576077034,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7032,
+                "mean_distance": 0.22463557079103547,
+                "mean_adversorial_distance": 0.18740507346776472,
+                "max_distance": 0.27588996640466185,
+                "max_adversorial_distance": 0.27588996640466185,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.7154874892148404,
+                "mean_distance": 0.24198545296350313,
+                "mean_adversorial_distance": 0.12995116194105544,
+                "max_distance": 0.29999988518348825,
+                "max_adversorial_distance": 0.29999988518348825,
+                "valid_inputs": 4636,
+                "invalid_inputs": 5364
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.0027434842249657062,
+                "mean_distance": 0.0008199998632596842,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0.2994288084301572,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 729,
+                "invalid_inputs": 9271
+            }
+        ]
+    },
+    {
+        "dataset": "fashion_mnist",
+        "dtype": "datasetC",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9276,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.8793,
+                "mean_distance": 0.056286213497033194,
+                "mean_adversorial_distance": 0.02494590850981134,
+                "max_distance": 0.06887482367447213,
+                "max_adversorial_distance": 0.06855648646483231,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.8289,
+                "mean_distance": 0.11241927178633161,
+                "mean_adversorial_distance": 0.0718017302457402,
+                "max_distance": 0.13767978457131136,
+                "max_adversorial_distance": 0.13711297615604137,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.7822,
+                "mean_distance": 0.16842440194951055,
+                "mean_adversorial_distance": 0.12434605432233953,
+                "max_distance": 0.20642657283618346,
+                "max_adversorial_distance": 0.20566946258691093,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.7423,
+                "mean_distance": 0.22427816764157618,
+                "mean_adversorial_distance": 0.17836026624552334,
+                "max_distance": 0.2751220477293329,
+                "max_adversorial_distance": 0.27422595767805547,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.7583781547372777,
+                "mean_distance": 0.24470641884103325,
+                "mean_adversorial_distance": 0.11057403778574508,
+                "max_distance": 0.29999991517983227,
+                "max_adversorial_distance": 0.2999188054003714,
+                "valid_inputs": 4834,
+                "invalid_inputs": 5166
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.0215633423180593,
+                "mean_distance": 0.007121692497751272,
+                "mean_adversorial_distance": 0.0008229961443121013,
+                "max_distance": 0.299958139523796,
+                "max_adversorial_distance": 0.2996246821237483,
+                "valid_inputs": 742,
+                "invalid_inputs": 9258
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "dl2",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.995,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9934,
+                "mean_distance": 0.05682430686282817,
+                "mean_adversorial_distance": 0.013464897051491663,
+                "max_distance": 0.06614376867875121,
+                "max_adversorial_distance": 0.06020795942483383,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9897,
+                "mean_distance": 0.11338478349458012,
+                "mean_adversorial_distance": 0.056701613745715564,
+                "max_distance": 0.13228754101836449,
+                "max_adversorial_distance": 0.1256980178421277,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9854,
+                "mean_distance": 0.16972329047229892,
+                "mean_adversorial_distance": 0.10822030216358088,
+                "max_distance": 0.19843130842988355,
+                "max_adversorial_distance": 0.188547026161194,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.9752,
+                "mean_distance": 0.22512807867898887,
+                "mean_adversorial_distance": 0.17299945716470758,
+                "max_distance": 0.2638467812258712,
+                "max_adversorial_distance": 0.2497064342497411,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.9512877287029484,
+                "mean_distance": 0.27618322426634434,
+                "mean_adversorial_distance": 0.23573447664721334,
+                "max_distance": 0.2999999688084721,
+                "max_adversorial_distance": 0.2999404771634348,
+                "valid_inputs": 8581,
+                "invalid_inputs": 1419
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.7275747508305648,
+                "mean_distance": 0.2648266640016391,
+                "mean_adversorial_distance": 0.2005442119267097,
+                "max_distance": 0.2999999369960485,
+                "max_adversorial_distance": 0.2999999369960485,
+                "valid_inputs": 602,
+                "invalid_inputs": 9398
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetA",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9954,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9948,
+                "mean_distance": 0.05450394609379271,
+                "mean_adversorial_distance": 0.006432985148105609,
+                "max_distance": 0.06139013281139635,
+                "max_adversorial_distance": 0.05766280114584724,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9931,
+                "mean_distance": 0.10869963327729518,
+                "mean_adversorial_distance": 0.0365895584776731,
+                "max_distance": 0.12257648291637707,
+                "max_adversorial_distance": 0.11636244791760075,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9914,
+                "mean_distance": 0.1626354337093452,
+                "mean_adversorial_distance": 0.0763943920129805,
+                "max_distance": 0.18386472383321684,
+                "max_adversorial_distance": 0.17623994796481546,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.9894,
+                "mean_distance": 0.21549086518516047,
+                "mean_adversorial_distance": 0.12361923201606166,
+                "max_distance": 0.24289815593462746,
+                "max_adversorial_distance": 0.23387962495436304,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.9869895916733387,
+                "mean_distance": 0.26818004695371034,
+                "mean_adversorial_distance": 0.17498649318984685,
+                "max_distance": 0.29985013680318917,
+                "max_adversorial_distance": 0.29154859666393135,
+                "valid_inputs": 9992,
+                "invalid_inputs": 8
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.9131121642969984,
+                "mean_distance": 0.2719598629250021,
+                "mean_adversorial_distance": 0.047491824707656054,
+                "max_distance": 0.29999994635583754,
+                "max_adversorial_distance": 0.2965211750823178,
+                "valid_inputs": 633,
+                "invalid_inputs": 9367
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetB",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.996,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9943,
+                "mean_distance": 0.05538721679530027,
+                "mean_adversorial_distance": 0.016578258805771365,
+                "max_distance": 0.06412876216994035,
+                "max_adversorial_distance": 0.05984352522704804,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9924,
+                "mean_distance": 0.1104804153709316,
+                "mean_adversorial_distance": 0.05229273211706126,
+                "max_distance": 0.12780664159730806,
+                "max_adversorial_distance": 0.12518408677776818,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9898,
+                "mean_distance": 0.16532584239141573,
+                "mean_adversorial_distance": 0.0998496747992929,
+                "max_distance": 0.19140039195216169,
+                "max_adversorial_distance": 0.18788158361591542,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.987,
+                "mean_distance": 0.21913348667886776,
+                "mean_adversorial_distance": 0.15157928234522045,
+                "max_distance": 0.25434624790711835,
+                "max_adversorial_distance": 0.24930594510960613,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.9828823288232882,
+                "mean_distance": 0.27203995970042855,
+                "mean_adversorial_distance": 0.2074670442311783,
+                "max_distance": 0.2999763151234465,
+                "max_adversorial_distance": 0.29957104393928924,
+                "valid_inputs": 9756,
+                "invalid_inputs": 244
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.931930693069307,
+                "mean_distance": 0.2757720877883063,
+                "mean_adversorial_distance": 0.07854495637668844,
+                "max_distance": 0.29999994849787903,
+                "max_adversorial_distance": 0.2989907674231482,
+                "valid_inputs": 808,
+                "invalid_inputs": 9192
+            }
+        ]
+    },
+    {
+        "dataset": "mnist",
+        "dtype": "datasetC",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.995,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0025,
+                "accuracy": 0.9932,
+                "mean_distance": 0.053835541367638656,
+                "mean_adversorial_distance": 0.014306191664679257,
+                "max_distance": 0.061135072447754416,
+                "max_adversorial_distance": 0.05722759396760412,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9911,
+                "mean_distance": 0.1073693021011663,
+                "mean_adversorial_distance": 0.04710166176269248,
+                "max_distance": 0.12227014603804687,
+                "max_adversorial_distance": 0.11445519761824066,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0075,
+                "accuracy": 0.9902,
+                "mean_distance": 0.16064870166668335,
+                "mean_adversorial_distance": 0.07876953725382553,
+                "max_distance": 0.18340521833346277,
+                "max_adversorial_distance": 0.17428420951168422,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.01,
+                "accuracy": 0.989,
+                "mean_distance": 0.21285550215582988,
+                "mean_adversorial_distance": 0.11625414913164396,
+                "max_distance": 0.2425026673652964,
+                "max_adversorial_distance": 0.23154940700044319,
+                "valid_inputs": 10000,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.0125,
+                "accuracy": 0.9870974194838967,
+                "mean_distance": 0.2649163124166337,
+                "mean_adversorial_distance": 0.16287267611297185,
+                "max_distance": 0.29882058995655886,
+                "max_adversorial_distance": 0.28812717285991074,
+                "valid_inputs": 9998,
+                "invalid_inputs": 2
+            },
+            {
+                "epsilon": 0.015,
+                "accuracy": 0.9523424878836834,
+                "mean_distance": 0.2787481918640844,
+                "mean_adversorial_distance": 0.04447382317743094,
+                "max_distance": 0.2999999398831477,
+                "max_adversorial_distance": 0.299524809989092,
+                "valid_inputs": 1238,
+                "invalid_inputs": 8762
+            }
+        ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "dl2",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9908872901678657,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.001,
+                "accuracy": 0.984652278177458,
+                "mean_distance": 0.04515654638335931,
+                "mean_adversorial_distance": 0.01868750737120929,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.046000072084781844,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.9808153477218226,
+                "mean_distance": 0.09031339680031138,
+                "mean_adversorial_distance": 0.04829997336706372,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200017219014933,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9762589928057553,
+                "mean_distance": 0.13547051914511968,
+                "mean_adversorial_distance": 0.08496624479890566,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800021390642736,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9690647482014388,
+                "mean_distance": 0.1806182320509831,
+                "mean_adversorial_distance": 0.12969502640210098,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9621103117505995,
+                "mean_distance": 0.22567222073728202,
+                "mean_adversorial_distance": 0.17456040598112613,
+                "max_distance": 0.23000009017795991,
+                "max_adversorial_distance": 0.23000008855826867,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.006,
+                "accuracy": 0.9556354916067147,
+                "mean_distance": 0.2707412356877927,
+                "mean_adversorial_distance": 0.21917404687218076,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            }
+        ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetA",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9932853717026379,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.001,
+                "accuracy": 0.9920863309352518,
+                "mean_distance": 0.04527878198424326,
+                "mean_adversorial_distance": 0.006969684072439794,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.046000074109443935,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.988009592326139,
+                "mean_distance": 0.09055786853740662,
+                "mean_adversorial_distance": 0.040440117708097564,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200017283802117,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9839328537170264,
+                "mean_distance": 0.1358372281928644,
+                "mean_adversorial_distance": 0.08013847125894072,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800069495495446,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9738609112709832,
+                "mean_distance": 0.18110765222260455,
+                "mean_adversorial_distance": 0.13633939504619988,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9611510791366906,
+                "mean_distance": 0.2262893068573203,
+                "mean_adversorial_distance": 0.18977764669932665,
+                "max_distance": 0.23000009017796172,
+                "max_adversorial_distance": 0.23000009017796172,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.006,
+                "accuracy": 0.9489208633093525,
+                "mean_distance": 0.27148521798946135,
+                "mean_adversorial_distance": 0.23919470659447203,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            }
+        ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetB",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9913669064748202,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.001,
+                "accuracy": 0.984652278177458,
+                "mean_distance": 0.045183454033811916,
+                "mean_adversorial_distance": 0.020078074058104776,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.04600009160198503,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.9731414868105516,
+                "mean_distance": 0.09036720656807884,
+                "mean_adversorial_distance": 0.062328350599437546,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200018644332886,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9513189448441247,
+                "mean_distance": 0.13555124254643813,
+                "mean_adversorial_distance": 0.11336633500644319,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800069754645292,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9287769784172661,
+                "mean_distance": 0.18072629800992993,
+                "mean_adversorial_distance": 0.16142982248956375,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.9031175059952038,
+                "mean_distance": 0.22581216201549845,
+                "mean_adversorial_distance": 0.20903675808922179,
+                "max_distance": 0.23000009025894386,
+                "max_adversorial_distance": 0.23000009025894386,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.006,
+                "accuracy": 0.8769784172661871,
+                "mean_distance": 0.27091234771913647,
+                "mean_adversorial_distance": 0.256055848590672,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            }
+        ]
+    },
+    {
+        "dataset": "gtsrb",
+        "dtype": "datasetC",
+        "attacks": [
+            {
+                "epsilon": 0,
+                "accuracy": 0.9913669064748202,
+                "mean_distance": 0.0,
+                "mean_adversorial_distance": 0.0,
+                "max_distance": 0,
+                "max_adversorial_distance": 0,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.001,
+                "accuracy": 0.9870503597122302,
+                "mean_distance": 0.04518979945958804,
+                "mean_adversorial_distance": 0.015333314788582807,
+                "max_distance": 0.04600009322166443,
+                "max_adversorial_distance": 0.04600007232773703,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.002,
+                "accuracy": 0.9817745803357314,
+                "mean_distance": 0.09037990281613434,
+                "mean_adversorial_distance": 0.04840725623357016,
+                "max_distance": 0.09200018644332886,
+                "max_adversorial_distance": 0.09200018644332886,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.003,
+                "accuracy": 0.9733812949640288,
+                "mean_distance": 0.13557027764042445,
+                "mean_adversorial_distance": 0.09288328458131392,
+                "max_distance": 0.1380009651184082,
+                "max_adversorial_distance": 0.13800056116876608,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.004,
+                "accuracy": 0.9628297362110312,
+                "mean_distance": 0.18075176865376846,
+                "mean_adversorial_distance": 0.14066465248381452,
+                "max_distance": 0.18400037288665771,
+                "max_adversorial_distance": 0.18400037288665771,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.005,
+                "accuracy": 0.950599520383693,
+                "mean_distance": 0.22584500268774288,
+                "mean_adversorial_distance": 0.188913177107536,
+                "max_distance": 0.23000009082583608,
+                "max_adversorial_distance": 0.23000008977303912,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            },
+            {
+                "epsilon": 0.006,
+                "accuracy": 0.9390887290167865,
+                "mean_distance": 0.2709524079687656,
+                "mean_adversorial_distance": 0.2357693281025084,
+                "max_distance": 0.2760005593299866,
+                "max_adversorial_distance": 0.2760005593299866,
+                "valid_inputs": 4170,
+                "invalid_inputs": 0
+            }
+        ]
+    }
+]
