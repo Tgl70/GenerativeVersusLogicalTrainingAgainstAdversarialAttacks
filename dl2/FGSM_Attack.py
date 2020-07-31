@@ -25,6 +25,7 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
     correct = 0
     valid_inputs = 0
     invalid_inputs = 0
+    img_examples = []
     adv_examples = []
     mean_distance = 0
     mean_adversorial_distance = 0
@@ -72,34 +73,26 @@ def test(model, device, test_loader, epsilon, dataset, dtype):
                 mean_adversorial_distance += distance
                 if distance > max_adversorial_distance:
                     max_adversorial_distance = distance
+
+                # Save some adv examples for visualization later
+                if len(adv_examples) < 5:
+                    img_ex = data.squeeze().detach().cpu().numpy()
+                    adv_ex = perturbed_data.squeeze().detach().cpu().numpy()
+                    img_examples.append( (init_pred.item(), final_pred.item(), img_ex) )
+                    adv_examples.append( (init_pred.item(), final_pred.item(), adv_ex) )
+
+                    if dataset == "cifar10":
+                        img = Image.fromarray(np.uint8(img_ex * 255), 'RGB')
+                        adv = Image.fromarray(np.uint8(adv_ex * 255), 'RGB')
+                    else:
+                        img = Image.fromarray(np.uint8(img_ex * 255), 'L')
+                        adv = Image.fromarray(np.uint8(adv_ex * 255), 'L')
+                    img.save(f"FGSM_images/{dataset}_{dtype}_e{epsilon}_i{init_pred.item()}_f{final_pred.item()}_original.png")
+                    adv.save(f"FGSM_images/{dataset}_{dtype}_e{epsilon}_i{init_pred.item()}_f{final_pred.item()}_adversarial.png")
+
         else:
             invalid_inputs += 1
-
-        '''
-            # Special case for saving 0 epsilon examples
-            if (epsilon == 0) and (len(adv_examples) < 5):
-                adv_ex = perturbed_data.squeeze().detach().cpu().numpy()
-                adv_examples.append( (init_pred.item(), final_pred.item(), adv_ex) )
-
-                if dataset == "cifar10":
-                    img = Image.fromarray(np.uint8(adv_ex * 255), 'RGB')
-                else:
-                    img = Image.fromarray(np.uint8(adv_ex * 255), 'L')
-                img.save(f"FGSM_images/{dataset}_{dtype}_e{epsilon}_i{init_pred.item()}_f{final_pred.item()}.png")
-
-        else:
-            # Save some adv examples for visualization later
-            if len(adv_examples) < 5:
-                adv_ex = perturbed_data.squeeze().detach().cpu().numpy()
-                adv_examples.append( (init_pred.item(), final_pred.item(), adv_ex) )
-
-                if dataset == "cifar10":
-                    img = Image.fromarray(np.uint8(adv_ex * 255), 'RGB')
-                else:
-                    img = Image.fromarray(np.uint8(adv_ex * 255), 'L')
-                img.save(f"FGSM_images/{dataset}_{dtype}_e{epsilon}_i{init_pred.item()}_f{final_pred.item()}.png")
-        '''
-
+            
     # Calculate final accuracy for this epsilon
     final_acc = correct/valid_inputs
     mean_distance /= valid_inputs
